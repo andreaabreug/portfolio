@@ -1,0 +1,275 @@
+@font-face {
+    src: url("../fonts/MuseoSans_100.otf");
+    font-family: "MuseoSans_100";
+}
+
+@font-face {
+    src: url("../fonts/MuseoSans_300.otf");
+    font-family: "MuseoSans_300";
+}
+
+@font-face {
+    src: url("../fonts/MuseoSans_500.otf");
+    font-family: "MuseoSans_500";
+}
+
+@font-face {
+    src: url("../fonts/MuseoSans_700.otf");
+    font-family: "MuseoSans_700";
+}
+
+* {
+    cursor: url("../images/cursor_logo.png"), auto;
+    box-sizing: border-box;
+    font-family: MuseoSans_500;
+}
+
+body {
+    background-color: #DC6152;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+}
+
+h1 {
+    display: none;
+}
+
+header {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 7%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+    background-color: #DC6152;
+}
+
+.link {
+    text-decoration: none;
+    font-family: MuseoSans_700;
+    color: #2e2e2e;
+    margin: auto 20px;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+main {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#about {
+    position: fixed;
+    padding: 2% 8%;
+    z-index: 0;
+}
+
+.bio, .link-bio {
+    color: white;
+    font-size: 64px;
+
+}
+
+.link-bio:hover {
+    color: #2e2e2e;
+}
+
+#projects {
+    position: absolute;
+    z-index: 2;
+}
+
+.blur-element {
+    animation: blur-fade-in 1s forwards;
+}
+.blur-element1 {
+backdrop-filter: blur(7px);
+}
+
+@keyframes blur-fade-in {
+    from {
+        -webkit-backdrop-filter: blur(0px);
+        backdrop-filter: blur(0px);
+    }
+
+    to {
+        -webkit-backdrop-filter: blur(7px);
+        backdrop-filter: blur(7px);
+    }
+}
+.pagination {
+    padding: 0 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project {
+    height: 100vh;
+    padding: 6% 0;
+}
+
+.pagination p {
+    color: white;
+    font-size: 16px;
+}
+
+#empty {
+    height: 100vh;
+}
+
+h2 {
+    font-family: MuseoSans_700;
+    writing-mode:tb-rl;
+    -webkit-transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform:rotate(180deg);
+    transform: rotate(180deg);
+    white-space:nowrap;
+    display:block;
+    bottom:0;
+    width:20px;
+    height:20px;
+    align-self: flex-end;
+    /* color: #2e2e2e; */
+    font-size: 40px;
+    margin: 4% 0;
+}
+
+h4 {
+    margin: 50px 0;
+}
+
+.description-container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+
+.project-button {
+    font-size: 16px;
+    text-decoration: none;
+    color: #2e2e2e;
+    border: 1px solid #2e2e2e;
+    border-radius: 30px;
+    padding: 10px 40px;
+    /* margin: 20px 0; */
+}
+
+.project-button:hover {
+    color: white;
+    border: 1px solid white;
+    /* transition-property: color;
+    transition-duration: 3s;
+    transition-timing-function: ease; */
+}
+
+.title-link {
+    text-decoration: none;
+    color: #2e2e2e;
+}
+
+.title-link:hover {
+    text-decoration: underline;
+}
+
+.project-info {
+     /* width: 85%; */
+     /* display: flex; */
+     padding: 0 8%;
+     display: grid;
+     /* grid-template-columns: repeat(3, 1fr) */
+     grid-template-columns: 10% 55% 35%;
+}
+
+.image-size {
+     display: flex;
+     justify-content: center;
+}
+
+.project-image {
+     height: 600px;
+
+}
+
+#inicio {
+     display: none;
+}
+
+.description {
+     font-size: 32px;
+     color: #2e2e2e;
+     margin: 0 0;
+     /* display: flex;
+     align-items: flex-end; */
+}
+
+.back-icon, .for-icon {
+     height: 40px;
+     width: 40px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+/* .pagination a .back-icon path:hover {
+     stroke: #2e2e2e;
+} */
+
+.pagination a .back-icon:hover, .pagination a .for-icon:hover {
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+ /* .pagination {
+     width: 85%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ } */
+
+ .mobile-screen {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     color: white;
+     background-color: #DC6152;
+     width: 100vw;
+     height: 100vh;
+     padding: 0 16px;
+ }
+
+ .mobile-screen p {
+     font-size: 40px;
+ }
+
+ .mobile-screen img {
+     height: 100px;
+     justify-self: start;
+ }
+
+ @media only screen and (max-width: 768px) {
+     .desktop-screen {
+         display: none;
+     }
+  
+}
+@media only screen and (min-width: 769px) {
+    .desktop-screen {
+        display: block;
+    }
+    .mobile-screen {
+        display: none;
+    }
+}
